@@ -94,12 +94,12 @@
                         <i class="fab fa-instagram fa-stack-1x"></i>
                     </a>
                 </span>
-                <!-- <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
+                <span class="fa-stack">
+                    <a href="loginv1/indexlogin.php">
+                        <i class="fas fa-circle fa-stack-2x"aria-hidden="true"></i>
+                        <i class="fab fa-lock fa-stack-1x"></i>
                     </a>
-                </span> -->
+                </span>
             </span>
         </div>
     </nav> <!-- end of navbar -->
@@ -240,44 +240,32 @@
                             <div class="swiper-wrapper">
 
                                 <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-1.jpg" alt="alternative">
-                                    </div>
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">I took the SEO training course about a year ago and I am very happy. It taught me all the basics of search engine optimization and some tricks.</div>
-                                        <div class="testimonial-author">Jude Thorn - Online Marketer</div>
+                                        <div class="testimonial-author">Burkay Erdağ</div>
+                                        <div class="testimonial-text">Sayısal - 50 Bin</div>
                                     </div>
                                 </div>
                                 
                                 <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-2.jpg" alt="alternative">
-                                    </div>
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Awesome course for the money. I never thought I could learn so much about search engine optimization in such a short amount of time. Highly recommend.</div>
-                                        <div class="testimonial-author">Roy Smith - Developer</div>
+                                        <div class="testimonial-author">Burkay Erdağ 2</div>
+                                        <div class="testimonial-text">Sayısal - 50 Bin</div>
                                     </div>
                                 </div>
                                 
 
                                 <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-3.jpg" alt="alternative">
-                                    </div>
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Corso is the best SEO training course in the market. It teaches you all the basics but it also adds value with some advanced tips & tricks the are great.</div>
-                                        <div class="testimonial-author">Martin Singer - Online Marketer</div>
+                                        <div class="testimonial-author">Burkay Erdağ 3</div>
+                                        <div class="testimonial-text">Sayısal - 50 Bin</div>
                                     </div>
                                 </div>
                                 
 
                                 <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-4.jpg" alt="alternative">
-                                    </div>
                                     <div class="text-wrapper">
-                                        <div class="testimonial-text">Learning SEO can actually be fun. I attended Corso SEO training and I had a great time with my peer students and the instructors. Highly recommended course.</div>
-                                        <div class="testimonial-author">Ronda Louis - Business Owner</div>
+                                        <div class="testimonial-author">Burkay Erdağ 4</div>
+                                        <div class="testimonial-text">Sayısal - 50 Bin</div>
                                     </div>
                                 </div>
                                 
@@ -736,17 +724,17 @@
                     <!-- Contact Form -->
                     <form id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
+                            <input type="text" name="ad" required class="form-control-input">
                             <label class="label-control" for="cname">Ad-Soyad</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
+                            <input type="email" required class="form-control-input" id="cemail">
                             <label class="label-control" for="cemail">Email</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
+                            <textarea required class="form-control-textarea" name="mesaj" id="cmessage"></textarea>
                             <label class="label-control" for="cmessage">Mesajınız</label>
                             <div class="help-block with-errors"></div>
                         </div>
@@ -754,12 +742,12 @@
                             <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree to Corso's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
                             <div class="help-block with-errors"></div>
                         </div> -->
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">GÖNDER</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
+                            <div class="form-group">
+                                <button type="submit" value="Gönder" class="form-control-submit-button">GÖNDER</button>
+                            </div>
+                            <div class="form-message">
+                                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                            </div>
                     </form>
                     
                 </div>

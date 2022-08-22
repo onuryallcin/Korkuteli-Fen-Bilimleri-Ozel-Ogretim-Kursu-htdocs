@@ -1,59 +1,20 @@
 <?php
-$errorMSG = "";
-
-if (empty($_POST["name"])) {
-    $errorMSG = "Name is required ";
-} else {
-    $name = $_POST["name"];
-}
-
-if (empty($_POST["email"])) {
-    $errorMSG = "Email is required ";
-} else {
-    $email = $_POST["email"];
-}
-
-if (empty($_POST["message"])) {
-    $errorMSG = "Message is required ";
-} else {
-    $message = $_POST["message"];
-}
-
-if (empty($_POST["terms"])) {
-    $errorMSG = "Terms is required ";
-} else {
-    $terms = $_POST["terms"];
-}
-
-$EmailTo = "yourname@domain.com";
-$Subject = "New message from Corso landing page";
+include('../site/inc/vt.php');
 
 // prepare email body text
-$Body = "";
-$Body .= "Name: ";
-$Body .= $name;
-$Body .= "\n";
-$Body .= "Email: ";
-$Body .= $email;
-$Body .= "\n";
-$Body .= "Message: ";
-$Body .= $message;
-$Body .= "\n";
-$Body .= "Terms: ";
-$Body .= $terms;
-$Body .= "\n";
+if ($_POST) {
 
-// send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+    $kaydet = $baglanti->prepare("INSERT INTO iletisim SET ad=:ad, email=:email, mesaj=:mesaj");
+    $insert = $kaydet->execute(array(
+        'ad' => htmlspecialchars($_POST['ad']),
+        'email' => htmlspecialchars($_POST['email']),
+        'mesaj' => htmlspecialchars($_POST['mesaj']),
+    ));
+    if ($insert) {
 
-// redirect to success page
-if ($success && $errorMSG == ""){
-   echo "success";
-}else{
-    if($errorMSG == ""){
-        echo "Something went wrong :(";
+        echo '<script>swal("Başarılı","Mesajınız bize ulaştı","success");</script>';
     } else {
-        echo $errorMSG;
+        echo '<script>swal("Hata","Daha sonra tekrar deneyin","error");</script>';
     }
-}
+}   
 ?>
