@@ -1,14 +1,12 @@
 (function ($) {
-    "use strict"; // Start of use strict
-
-    // Toggle the side navigation
+    "use strict";
+    
     $("#sidebarToggle").on('click', function (e) {
         e.preventDefault();
         $("body").toggleClass("sidebar-toggled");
         $(".sidebar").toggleClass("toggled");
     });
 
-    // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
     $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function (e) {
         if ($(window).width() > 768) {
             var e0 = e.originalEvent,
@@ -18,7 +16,6 @@
         }
     });
 
-    // Scroll to top button appear
     $(document).on('scroll', function () {
         var scrollDistance = $(this).scrollTop();
         if (scrollDistance > 100) {
@@ -28,7 +25,6 @@
         }
     });
 
-    // Smooth scrolling using jQuery easing
     $(document).on('click', 'a.scroll-to-top', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -37,4 +33,4 @@
         event.preventDefault();
     });
 
-})(jQuery); // End of use strict
+})(jQuery);
